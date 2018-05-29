@@ -1,0 +1,36 @@
+{
+  "name": "w4starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --watch --env=dev",
+    "dev": "webpack-dev-server --env=dev",    
+    "build-dev": "webpack --env=dev",
+    "build-prod": "webpack --env=prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.11",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "vue-loader": "^15.2.2",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.10.1",
+    "webpack-cli": "^2.1.4",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "vue": "^2.5.16"
+  }
+}
