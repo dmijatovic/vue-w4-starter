@@ -4,6 +4,8 @@
 
     <h1>It works!</h1>
     
+    <router-view></router-view>
+    
     <app-footer></app-footer>
   </section>  
 </template>
@@ -21,5 +23,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './app';
+
+//@import './styles/app';
+//@import './app';
+
 </style>

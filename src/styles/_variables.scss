@@ -1,0 +1,55 @@
+//------------------------------
+//fonts
+$font-family: 'Open Sans', sans-serif;
+
+//------------------------------
+// basic colors
+$prim-color: #1D3557;
+$prim-color-contrast: #F1FAEE;
+$sec-color: #457B9D;
+$sec-color-contrast: #F1FAEE;
+$accent-color: #FF8C21;
+$accent-color-contrast: #1D3557; 
+$error-color: #E63946;
+$error-color-contrast: #F1FAEE;
+$black-color:#0F0E0F; 
+$black-color-contrast: #F1FAEE; 
+$dark-grey:#37393D;
+$dark-grey-contrast: #fff;
+$mid-grey:#8C9091;
+$mid-grey-contrast:  #0F0E0F; 
+$light-grey: #EDEDED;
+$light-grey-contrast: #0F0E0F; 
+$border-color: #C5CCC8;
+$border-color-contrast: #000;
+
+//------------------------------
+// linked/synched colors: basic color that should ne synced
+$header-bg-color: $light-grey;
+
+
+
+//-------------------------------
+//spacing: padding or margins
+$space-xs: 0.4rem;
+$space-sm: 0.8rem;
+$space-md: 1.2rem;
+$space-lg: 1.6rem;
+$space-xl: 1.8rem;
+$space-2xl: 2rem;
+$space-3xl: 3rem;
+$space-4xl: 4rem;
+$space-5xl: 5rem;
+
+//-------------------------------
+// shadows
+// box-shadow: h-offset v-offset blur spread color
+// spread: Optinal. The spread radius. A positive value increases the size of the shadow, a negative value decreases the size of the shadow
+// color: Optional. The color of the shadow. The default value is the text color. Look at CSS Color Values for a complete list of possible color values.
+
+$box-shadow-xs: 0 0 $space-xs $mid-grey;
+$box-shadow-sm: 0 0 $space-sm $mid-grey;
+$box-shadow-md: 0 0 $space-md $mid-grey;
+$box-shadow-lg: 0 0 $space-lg $mid-grey;
+$box-shadow-xl: 0 0 $space-xl $mid-grey;
+$box-shadow-2xl: 0 0 $space-2xl $mid-grey;

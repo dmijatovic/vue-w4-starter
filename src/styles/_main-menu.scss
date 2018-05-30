@@ -1,0 +1,36 @@
+
+@import 'variables';
+
+.main-menu{
+  ul {
+    display: flex;        
+    list-style-type: none;
+    margin: 0;
+    padding: 0;    
+  }
+}
+
+.menu-item{
+  display: flex;
+  align-items: center;
+  padding: 0.4em 0.8em;  
+  color: $sec-color;
+  font-weight: 700;
+  //this color should corespond to bg-header-color
+  border-bottom: 2px solid $header-bg-color;
+  cursor: pointer;  
+  i{
+    margin-right: 0.4em;
+  }
+}
+
+.menu-item.active{  
+  cursor: default;
+  color: $prim-color;
+  border-bottom: 2px solid $accent-color;
+}
+
+.menu-item:hover{
+  color: $prim-color;
+  //background-color: $sec-color-contrast;
+}
