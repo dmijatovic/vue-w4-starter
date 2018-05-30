@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack --watch --env=dev",
-    "dev": "webpack-dev-server --env=dev",    
+    "dev": "webpack-dev-server --env=dev",
     "build-dev": "webpack --env=dev",
     "build-prod": "webpack --env=prod"
   },
