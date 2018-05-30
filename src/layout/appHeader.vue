@@ -1,6 +1,14 @@
 <template>
-  <header class="app-header">
-    <h1>This is app header</h1>    
+  <header class="app-header container">    
+    <div class="app-header-left">
+      <img class="app-logo"
+        :src="appLogo" alt="app logo" />
+
+      <div class="app-title">
+        <h1>{{ appTitle }}</h1>    
+        <h4>{{ appSubtitle }}</h4>    
+      </div>    
+    </div>    
     <nav class="main-menu">
       <ul>
         <router-link v-for="item in mnuItems"
@@ -17,13 +25,16 @@
 
 <script>
 import { routes } from '../routes';
+import { appCfg } from '../appCfg';
 export default {
-  /*
+  
   data(){
     return {
-      mnuItems: routes.map( item => item.mnuItem)
+      appTitle: appCfg.appTitle,
+      appSubtitle: appCfg.appSubtitle,
+      appLogo: appCfg.appLogo
     }
-  }*/
+  },
   computed:{
     mnuItems(){
       let menu = [];
@@ -42,19 +53,5 @@ export default {
 </script>
 
 <style lang="scss">
-//import variables 
-@import '../styles/variables';
-
-.app-header{
-  display: flex;
-  align-items:  center;
-  justify-content: space-between;
-  padding: $space-sm $space-xl;
-  background-color: $header-bg-color;
-  border-bottom: 1px solid $accent-color;
-  box-shadow: $box-shadow-xs;
-  h1{
-    color: $dark-grey;
-  }
-}
+@import './appHeader'
 </style>

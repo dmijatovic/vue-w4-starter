@@ -2,9 +2,9 @@
   <section class="app-page">    
     <app-header></app-header>
 
-    <h1>It works!</h1>
-    
-    <router-view></router-view>
+    <main class="app-body">   
+      <router-view></router-view>
+    </main>
     
     <app-footer></app-footer>
   </section>  

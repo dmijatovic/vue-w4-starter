@@ -1,0 +1,28 @@
+
+
+//import variables 
+@import '../styles/variables';
+
+.app-header{
+  display: flex;
+  align-items:  center;
+  justify-content: space-between;
+  padding: $space-sm $space-xl;
+  background-color: $header-bg-color;
+  border-bottom: 1px solid $accent-color;
+  box-shadow: $box-shadow-xs;
+  h1{
+    color: $dark-grey;
+  }
+}
+
+.app-header-left{
+  display: flex;  
+  align-items: center;
+}
+
+.app-logo{  
+  max-height: 80px;  
+  margin-right: $space-sm;
+}
+
