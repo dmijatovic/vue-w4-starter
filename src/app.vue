@@ -24,7 +24,4 @@ export default {
 
 <style lang="scss" scoped>
 
-//@import './styles/app';
-//@import './app';
-
 </style>

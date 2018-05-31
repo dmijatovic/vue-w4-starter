@@ -22,7 +22,7 @@ Just run `npm install` and all libs mentioned here below should be installed.
   # 5. install babel loaders
   npm i babel-loader babel-core babel-preset-env babel-preset-stage-2 -D
   # 6. install other webpack util plugins
-  npm i html-webpack-plugin copy-webpack-plugin uglifyjs-webpack-plugin clean-webpack-plugin -D
+  npm i html-webpack-plugin copy-webpack-plugin uglifyjs-webpack-plugin clean-webpack-plugin file-loader url-loader -D
   # 7. install vue-router
   npm install vue-router --save
 ```

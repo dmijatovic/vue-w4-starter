@@ -43,6 +43,7 @@ module.exports = {
 				presets: ['env',"stage-2"]
 			}
 		},{
+			//SCSS configuration with extract css
 			test: /\.(scss|css)$/,
 			use: [/*{
 					loader: 'vue-style-loader'
@@ -54,6 +55,45 @@ module.exports = {
 				},{
 					loader: 'sass-loader'
 			}]
+		},{
+			/* config.module.rule('fonts') */		
+			test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/i,
+			use: [
+				/* config.module.rule('fonts').use('url-loader') */
+				{
+					loader: 'url-loader',
+					options: {
+						limit: 8192,
+						name: 'fonts/[name].[ext]'
+					}
+				}
+			]
+		},{
+			/* config.module.rule('images') */
+			test: /\.(svg|png|jpe?g|gif|webp)(\?.*)?$/,
+			use: [
+				/* config.module.rule('images').use('url-loader') */
+				{
+					loader: 'url-loader',
+					options: {
+						limit: 10000,
+						name: 'img/[name].[ext]'
+					}
+				}
+			]
+		},{
+			/* config.module.rule('media') */
+			test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+			use: [
+				/* config.module.rule('media').use('url-loader') */
+				{
+					loader: 'url-loader',
+					options: {
+						limit: 10000,
+						name: 'media/[name].[ext]'
+					}
+				}
+			]
 		}]
 	},
 
@@ -119,7 +159,7 @@ module.exports = {
 	 */
 	devtool: 'inline-source-map',
 	devServer:{				
-		port: 4040,
+		port: 4200,
 		stats: stats,
 	},
 };
