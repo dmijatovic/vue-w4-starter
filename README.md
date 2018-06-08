@@ -18,7 +18,7 @@ Just run `npm install` and all libs mentioned here below should be installed.
   # 3. install vuejs loader
   npm i vue-loader vue-template-compiler -D
   # 4. install scss loaders
-  npm i node-sass sass-loader css-loader mini-css-extract-plugin -D
+  npm i node-sass sass-loader css-loader mini-css-extract-plugin postcss-loader -D
   # 5. install babel loaders
   npm i babel-loader babel-core babel-preset-env babel-preset-stage-2 -D
   # 6. install other webpack util plugins

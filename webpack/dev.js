@@ -51,9 +51,20 @@ module.exports = {
 				//extract css into separate file
 				MiniCssExtractPlugin.loader,
 				{
-					loader: 'css-loader'
+					loader: 'css-loader',
+					options:{
+						sourceMap:true
+					}
 				},{
-					loader: 'sass-loader'
+					loader: 'postcss-loader',
+					options:{
+						sourceMap:true
+					}
+				},{
+					loader: 'sass-loader',
+					options:{
+						sourceMap:true
+					}
 			}]
 		},{
 			/* config.module.rule('fonts') */		
@@ -76,7 +87,7 @@ module.exports = {
 				{
 					loader: 'url-loader',
 					options: {
-						limit: 10000,
+						limit: 8192,
 						name: 'img/[name].[ext]'
 					}
 				}
@@ -89,7 +100,7 @@ module.exports = {
 				{
 					loader: 'url-loader',
 					options: {
-						limit: 10000,
+						limit: 8192,
 						name: 'media/[name].[ext]'
 					}
 				}
