@@ -1,0 +1,56 @@
+/**
+ *
+ * All animations must live in their own file
+ * in the animations directory and be included
+ * here.
+ * https://github.com/ConnorAtherton/loaders.css
+ * demo: https://connoratherton.com/loaders
+ */
+
+/**
+ * Styles shared by multiple animations
+ */
+@import 'loaders/variables';
+@import 'loaders/mixins';
+
+/**
+ * Dots
+ */
+@import 'loaders/animations/ball-pulse';
+@import 'loaders/animations/ball-pulse-sync';
+@import 'loaders/animations/ball-scale';
+@import 'loaders/animations/ball-scale-random';
+@import 'loaders/animations/ball-rotate';
+@import 'loaders/animations/ball-clip-rotate';
+@import 'loaders/animations/ball-clip-rotate-pulse';
+@import 'loaders/animations/ball-clip-rotate-multiple';
+@import 'loaders/animations/ball-scale-ripple';
+@import 'loaders/animations/ball-scale-ripple-multiple';
+@import 'loaders/animations/ball-beat';
+@import 'loaders/animations/ball-scale-multiple';
+@import 'loaders/animations/ball-triangle-trace';
+@import 'loaders/animations/ball-pulse-rise';
+@import 'loaders/animations/ball-grid-beat';
+@import 'loaders/animations/ball-grid-pulse';
+@import 'loaders/animations/ball-spin-fade-loader';
+@import 'loaders/animations/ball-spin-loader';
+@import 'loaders/animations/ball-zig-zag';
+@import 'loaders/animations/ball-zig-zag-deflect';
+
+/**
+ * Lines
+ */
+@import 'loaders/animations/line-scale';
+@import 'loaders/animations/line-scale-random';
+@import 'loaders/animations/line-scale-pulse-out';
+@import 'loaders/animations/line-scale-pulse-out-rapid';
+@import 'loaders/animations/line-spin-fade-loader';
+
+/**
+ * Misc
+ */
+@import 'loaders/animations/triangle-skew-spin';
+@import 'loaders/animations/square-spin';
+@import 'loaders/animations/pacman';
+@import 'loaders/animations/cube-transition';
+@import 'loaders/animations/semi-circle-spin';

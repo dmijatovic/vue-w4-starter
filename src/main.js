@@ -7,6 +7,15 @@ import App from './app.vue';
 //main - shared - styles
 import './styles/app.scss';
 
+//global components
+import svgIcon from './system/svgIcon.vue';
+import underConstruction from './system/underConstruction.vue';
+import appLoader from './system/appLoader.vue';
+Vue.component('svg-icon', svgIcon);
+Vue.component('under-construction', underConstruction);
+Vue.component('app-loader', appLoader);
+
+
 //use router
 Vue.use(VueRouter);
 //import routes

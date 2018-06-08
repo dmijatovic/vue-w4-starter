@@ -1,0 +1,103 @@
+
+@import '../scss/variables';
+
+.popup{
+  position: fixed;
+  //cannot animate with display:none
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top:0;left:0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba($dark-color, 0.9);
+  //start invisible
+  opacity:0;
+  visibility: hidden;  
+  z-index: -1;
+  //animate
+  transition: all 0.3s;
+
+  -webkit-backdrop-filter: blur(10px);
+  
+  &.active{
+    //display:flex;
+    visibility: visible;
+    opacity:1;
+    z-index: 99;
+  }
+
+  &-window{
+    //we use display:table to create 
+    //2 cell layout and center right cell in the middle
+    position: relative;
+    display: table;
+    width: 70%;
+    min-height: 50vh;
+    max-height: 80vh;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: $light-color;
+    box-shadow: $box-shadow-md;
+    //half size
+    transform: scale(0);
+    transition: all 0.5s 0.2s;
+  }
+
+  &.active &-window{
+    //half size
+    transform: scale(1);
+  }
+
+  &-image{
+    display: table-cell;
+    vertical-align: middle;
+    width: 33.33333%;
+    background-size: cover;
+  }
+
+  &-content{
+    display: table-cell;
+    vertical-align: middle;
+    width: 66.666667%;
+    padding: 3rem 2rem;
+    overflow: auto;
+  }
+
+  &-title{
+    font-size: $font-size-xl;
+    //font-weight: $font-weight-sm;
+    text-transform: uppercase;
+    color: $color-1st;
+    margin-bottom: 0.5rem;
+  }
+
+  &-subtitle{
+    font-size: $font-size-md;
+    text-transform: uppercase;
+    font-weight: $font-weight-md;
+    color: lighten($dark-color, 25%);
+    margin-bottom: 2rem
+  }
+  &-body{
+    font-size: $font-size-md;
+    //new css3 column layout props
+    //number of columns
+    column-count: 2;
+    //gap between columns
+    column-gap: $rem-4x;
+    //v-line between columns
+    //column-rule: 1px solid lighten($grey-color, 30%);
+    //add auto hypens to break words
+    //add languge
+    hyphens: auto;
+    //text-align: justify;
+  }
+
+  &-close{
+    position: absolute;
+    top: 1rem; right: 2rem;
+    font-size: $font-size-xl;
+    cursor: pointer;
+  }
+}

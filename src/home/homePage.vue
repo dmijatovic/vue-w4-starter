@@ -1,6 +1,12 @@
 <template>
 <section class="app-body">
-  <h1>Home page</h1>
+  <div>
+    <!--<h1>Home page</h1>-->
+    <under-construction></under-construction>
+  </div>
+  <app-loader
+    :type="''">
+  </app-loader>
 </section>
 </template>
 
@@ -9,7 +15,16 @@ export default {
 
 }
 </script>
+<style lang="scss">
+.app-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
 
-<style>
-
+.app-loader{
+  display: block;
+}
 </style>
