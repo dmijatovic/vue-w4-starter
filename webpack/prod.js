@@ -4,7 +4,7 @@ const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 /*
  * We've enabled UglifyJSPlugin for you! This minifies your app
  * in order to load faster and run less javascript.
@@ -31,7 +31,7 @@ const dist = path.resolve(__dirname, '../dist');
 
 module.exports = {
 	mode: 'production',
-	entry:{		
+	entry:{
 		index: './src/main.js'
 	},
 	output: {
@@ -48,24 +48,21 @@ module.exports = {
 			test: /\.js$/,
 			exclude: /node_modules/,
 			loader: 'babel-loader',
-			options: {
-				presets: ['env',"stage-2"]
-			}
+			// options: {
+			// 	presets: ['env',"stage-2"]
+			// }
 		},{
 			test: /\.(scss|css)$/,
 			use: [
 				//extract css into separate file
 				MiniCssExtractPlugin.loader,
 				{
-					loader: 'css-loader',
-					options:{
-						minimize: true
-					}
+					loader: 'css-loader'
 				},{
 					loader: 'sass-loader'
 			}]
 		},{
-			/* config.module.rule('fonts') */		
+			/* config.module.rule('fonts') */
 			test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/i,
 			use: [
 				/* config.module.rule('fonts').use('url-loader') */
@@ -106,9 +103,9 @@ module.exports = {
 		}]
 	},
 
-	plugins: [		
+	plugins: [
 		//remove all files from dist folder on each build
-		new CleanWebpackPlugin(['../dist/*.*']),		
+		new CleanWebpackPlugin(),
 		// initialize Vuejs plugin
 		new VueLoaderPlugin(),
 		//copy index html
@@ -126,7 +123,7 @@ module.exports = {
 		}),
 		//copy assets
 		//https://webpack.js.org/plugins/copy-webpack-plugin/
-		new CopyWebpackPlugin([						
+		new CopyWebpackPlugin([
 			//copy all files from assets dir to root
 			'./assets/'
 		]),

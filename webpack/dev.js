@@ -23,7 +23,7 @@ const dist = path.resolve(__dirname, '../dist');
 
 module.exports = {
 	mode: 'development',
-	entry:{		
+	entry:{
 		index: './src/main.js'
 	},
 	output: {
@@ -39,9 +39,9 @@ module.exports = {
 			test: /\.js$/,
 			exclude: /node_modules/,
 			loader: 'babel-loader',
-			options: {
-				presets: ['env',"stage-2"]
-			}
+			// options: {
+			// 	presets: ['@babel/preset-env']
+			// }
 		},{
 			//SCSS configuration with extract css
 			test: /\.(scss|css)$/,
@@ -67,7 +67,7 @@ module.exports = {
 					}
 			}]
 		},{
-			/* config.module.rule('fonts') */		
+			/* config.module.rule('fonts') */
 			test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/i,
 			use: [
 				/* config.module.rule('fonts').use('url-loader') */
@@ -119,7 +119,7 @@ module.exports = {
       inject: true
 		}),
 		//old extract text plugin to extract css
-		//new ExtractTextPlugin('[name].css')		
+		//new ExtractTextPlugin('[name].css')
 		new MiniCssExtractPlugin({
       // Options similar to webpackOptions.output
       // both options are optional
@@ -128,7 +128,7 @@ module.exports = {
 		}),
 		//copy assets
 		//https://webpack.js.org/plugins/copy-webpack-plugin/
-		new CopyWebpackPlugin([						
+		new CopyWebpackPlugin([
 			//copy all files from assets dir to root
 			//note: when no files folder is not copied!
 			'./assets/'
@@ -159,7 +159,7 @@ module.exports = {
 				}
 			}
 		}
-	},	
+	},
 	/**
 	 * Display stats, see link below for complete list
 	 * https://webpack.js.org/configuration/stats/#stats
@@ -169,7 +169,7 @@ module.exports = {
 	 * Webpack dev server setup
 	 */
 	devtool: 'inline-source-map',
-	devServer:{				
+	devServer:{
 		port: 4200,
 		stats: stats,
 	},
